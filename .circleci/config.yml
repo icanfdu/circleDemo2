@@ -25,6 +25,9 @@ jobs:
       - run:
           name: Run tests
           command: echo 'replace me with real tests!' && false
+      - add_ssh_keys:
+          fingerprints:
+            - 'SO:ME:FIN:G:ER:PR:IN:T'
   build:
     docker:
       - image: cimg/base:current
@@ -43,7 +46,7 @@ jobs:
       # Replace this with steps to deploy to users
       - run:
           name: deploy
-          command: "#e.g. ./deploy.sh"
+          command: '#e.g. ./deploy.sh'
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
